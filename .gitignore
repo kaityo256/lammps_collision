@@ -1,0 +1,4 @@
+log.lammps
+*.atoms
+*.dump
+vmd.state
