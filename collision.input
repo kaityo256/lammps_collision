@@ -17,4 +17,4 @@ fix		1 all nve
 
 dump		id all atom 100 collision.dump
 
-run		20000
+run 20000
