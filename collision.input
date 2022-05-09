@@ -15,6 +15,6 @@ neigh_modify every 20 delay 0 check no
 
 fix 1 all nve
 
-dump id all atom 100 collision.dump
+dump id all atom 100 collision.lammpstrj
 
 run 20000
