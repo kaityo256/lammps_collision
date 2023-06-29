@@ -31,7 +31,7 @@ def add_ball(atoms, xpos, xvel):
 def save_file(filename, atoms):
     with open(filename, "w") as f:
         f.write("Position Data\n\n")
-        f.write("{} atoms\n".format(len(atoms)))
+        f.write(f"{len(atoms)} atoms\n")
         f.write("1 atom types\n\n")
         f.write("-40.00 40.00 xlo xhi\n")
         f.write("-20.00 20.00 ylo yhi\n")
@@ -39,12 +39,12 @@ def save_file(filename, atoms):
         f.write("\n")
         f.write("Atoms\n\n")
         for i, a in enumerate(atoms):
-            f.write("{} {} {} {} {}\n".format(i+1, a.type, a.x, a.y, a.z))
+            f.write(f"{i+1} {a.type} {a.x} {a.y} {a.z}\n")
         f.write("\n")
         f.write("Velocities\n\n")
         for i, a in enumerate(atoms):
-            f.write("{} {} {} {}\n".format(i+1, a.vx, a.vy, a.vz))
-    print("Generated {}".format(filename))
+            f.write(f"{i+1} {a.vx} {a.vy} {a.vz}\n")
+    print(f"Generated {filename}")
 
 
 atoms = []
